@@ -1,0 +1,6 @@
+.selected {
+    background-color: yellow;
+}
+li:hover {
+    cursor: pointer;
+}

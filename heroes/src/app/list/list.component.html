@@ -1,0 +1,8 @@
+<div>
+  <ul>
+    <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
+      {{hero.name}}
+    </li>
+  </ul>
+  <app-details [hero]="selectedHero" (onDeleted)="onDeleted($event)"></app-details>
+</div>

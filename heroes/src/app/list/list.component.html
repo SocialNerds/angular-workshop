@@ -1,4 +1,6 @@
 <div>
+  <input type="text" placeholder="Hero name" [(ngModel)]="newHero">
+  <button (click)="onAdd()">Add</button>
   <ul>
     <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
       {{hero.name}}

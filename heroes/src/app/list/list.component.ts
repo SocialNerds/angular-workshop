@@ -10,18 +10,18 @@ import { HEROES } from '../heroes'
 export class ListComponent implements OnInit {
   heroes: Hero[] = HEROES
   selectedHero: Hero
+  newHero: string
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onSelect(hero: Hero) {
     this.selectedHero = hero
   }
 
   onDeleted(hero: Hero) {
-    this.heroes = this.heroes.filter(item => item !== hero )
+    this.heroes = this.heroes.filter(item => item !== hero)
     this.selectedHero = null
   }
 }

@@ -10,7 +10,7 @@ export class RepoService {
   private url: string = "https://api.github.com"
   constructor(private http: HttpClient) {}
 
-  getRepositories(username): Observable<Repo[]> {
+  getRepositories(username: string): Observable<Repo[]> {
     return this.http.get(`${this.url}/users/${username}/repos`)
       .map(this.loadData)
   }

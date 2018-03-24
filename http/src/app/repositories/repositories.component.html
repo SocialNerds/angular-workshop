@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let repo of repositories">
+    <a [href]="repo.url">{{repo.name}}</a> {{repo.language}}
+  </li>
+</ul>

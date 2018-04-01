@@ -24,4 +24,18 @@ export class ListComponent implements OnInit {
     this.heroes = this.heroes.filter(item => item !== hero)
     this.selectedHero = null
   }
+
+  onAdd() {
+    let nextId: number = Math.max.apply(
+      Math, this.heroes.map(function (o) { 
+        return o.id; 
+      })
+    ) + 1
+
+    this.heroes.push({
+      id: nextId,
+      name: this.newHero
+    })
+  }
+  
 }

@@ -1,3 +1,8 @@
+<input type="text" placeholder="Username" [(ngModel)]="githubUser">
+<button (click)="loadReposForUser()" [disabled]="loading || githubUserMissing()">Load</button>
+
+<div *ngIf="loading">Loading data for {{ githubUser }}...</div>
+<div *ngIf="errorCode === 404">Github user does not exist</div>
 <ul>
   <li *ngFor="let repo of repositories">
     <a [href]="repo.url">{{repo.name}}</a> {{repo.language}}
